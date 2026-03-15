@@ -22,63 +22,52 @@ const { title, description = "IIAT Hyderabad — Indian Institute of Advanced Te
 <body class="bg-white text-[#21275a]">
 
   <!-- Announcement Ticker -->
-  <div class="bg-[#21275a] overflow-hidden py-2">
+  <div class="bg-[#e11d48] overflow-hidden py-2 shadow-inner">
     <div class="flex whitespace-nowrap">
-      <span class="animate-ticker inline-block text-white text-xs font-bold tracking-widest uppercase px-4">
-        Our ISAT (IIAT Scholarship Assessment Test) is now live &bull; Register Now — Free &bull; No JEE Required &bull; 6 Specialized B.Tech Programs &bull; 500+ Students Enrolled &bull; Our ISAT is now live &bull; Register Now — Free &bull; No JEE Required &bull; 6 Specialized B.Tech Programs &bull; 500+ Students Enrolled &bull; Our ISAT is now live &bull; Register Now — Free &bull; No JEE Required &bull; 6 Specialized B.Tech Programs &bull; 500+ Students Enrolled &bull;&nbsp;
+      <span class="animate-ticker inline-block text-white text-[10px] font-black tracking-[0.2em] uppercase px-4">
+        Admission Open for 2026 Batch &bull; Join India's Most Advanced AI-First B.Tech Program &bull; Register for ISAT Now &bull; Scholarships up to 100% &bull; Industry Integrated Curriculum &bull; Admission Open for 2026 Batch &bull; Join India's Most Advanced AI-First B.Tech Program &bull; Register for ISAT Now &bull; Scholarships up to 100% &bull; Industry Integrated Curriculum &bull;
       </span>
     </div>
   </div>
 
   <!-- Navbar -->
-  <nav id="navbar" class="sticky top-0 z-50 bg-white border-b border-[#21275a]/10 px-6 lg:px-16 py-4 flex items-center justify-between transition-shadow duration-300">
+  <nav id="navbar" class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#e11d48]/10 px-6 lg:px-16 py-3 flex items-center justify-between transition-all duration-300">
     <a href="/" class="flex items-center gap-3">
-      <img src="/logo-iiat.png" alt="IIAT Hyderabad" class="h-12 w-auto object-contain" />
+      <img src="/new-logo.jpg" alt="IIAT - Indian Institute of Advanced Technologies" class="h-10 md:h-12 w-auto object-contain hover:scale-105 transition-transform" />
     </a>
 
-    <div class="hidden lg:flex items-center gap-8">
+    <div class="hidden lg:flex items-center gap-10">
       <div class="relative group">
-        <button class="flex items-center gap-1 font-bold text-sm text-[#21275a] hover:text-[#b00f1e] transition-colors">
+        <button class="flex items-center gap-1 font-bold text-sm text-[#21275a] hover:text-[#e11d48] transition-colors">
           Programs
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div class="absolute top-full left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-[#21275a]/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
-          <a href="/programs/btech-ai-ds" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#21275a]/5 transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#b00f1e]/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4 text-[#b00f1e]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[500px] bg-white rounded-3xl shadow-2xl border border-[#21275a]/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 grid grid-cols-2 gap-4">
+          <a href="/programs/btech-ai-ds" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-[#e11d48]/5 transition-colors border border-transparent hover:border-[#e11d48]/10">
+            <div class="w-10 h-10 rounded-xl bg-[#e11d48]/10 flex items-center justify-center flex-shrink-0">
+               <svg class="w-5 h-5 text-[#e11d48]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
             </div>
-            <div><div class="font-bold text-sm text-[#21275a]">AI & Data Science</div><div class="text-xs text-[#21275a]/60">B.Tech CSE — 180 Seats</div></div>
+            <div><div class="font-black text-sm text-[#21275a]">AI & Data Science</div><div class="text-[10px] text-[#21275a]/50 uppercase tracking-widest font-bold">180 Seats</div></div>
           </a>
-          <a href="/programs/btech-fintech" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#21275a]/5 transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#b00f1e]/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4 text-[#b00f1e]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2"/></svg>
+          <a href="/programs/btech-fintech" class="flex items-center gap-4 p-4 rounded-2xl hover:bg-[#e11d48]/5 transition-colors border border-transparent hover:border-[#e11d48]/10">
+            <div class="w-10 h-10 rounded-xl bg-[#e11d48]/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-[#e11d48]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2"/></svg>
             </div>
-            <div><div class="font-bold text-sm text-[#21275a]">FinTech & AI</div><div class="text-xs text-[#21275a]/60">B.Tech CSE — 60 Seats</div></div>
+            <div><div class="font-black text-sm text-[#21275a]">FinTech & AI</div><div class="text-[10px] text-[#21275a]/50 uppercase tracking-widest font-bold">60 Seats</div></div>
           </a>
-          <a href="/programs/btech-cyber" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#21275a]/5 transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#b00f1e]/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4 text-[#b00f1e]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </div>
-            <div><div class="font-bold text-sm text-[#21275a]">Cyber Security</div><div class="text-xs text-[#21275a]/60">B.Tech CSE — 60 Seats</div></div>
-          </a>
-          <a href="/programs/btech-core" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#21275a]/5 transition-colors">
-            <div class="w-8 h-8 rounded-lg bg-[#b00f1e]/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4 text-[#b00f1e]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-            </div>
-            <div><div class="font-bold text-sm text-[#21275a]">Core CSE</div><div class="text-xs text-[#21275a]/60">B.Tech — 180 Seats</div></div>
-          </a>
+          <!-- More programs can be added here -->
         </div>
       </div>
-      <a href="/campus" class="font-bold text-sm text-[#21275a] hover:text-[#b00f1e] transition-colors">Campus</a>
-      <a href="/about" class="font-bold text-sm text-[#21275a] hover:text-[#b00f1e] transition-colors">About</a>
-      <a href="/faq" class="font-bold text-sm text-[#21275a] hover:text-[#b00f1e] transition-colors">FAQs</a>
-      <a href="/contact" class="font-bold text-sm border-2 border-[#21275a] text-[#21275a] px-5 py-2 rounded-lg hover:border-[#b00f1e] hover:text-[#b00f1e] transition-all">Download Brochure</a>
-      <a href="/register" class="font-extrabold text-sm bg-[#b00f1e] text-white px-6 py-2.5 rounded-lg hover:bg-[#8a0c17] transition-all transform hover:scale-105">
+      <a href="/campus" class="font-bold text-sm text-[#21275a] hover:text-[#e11d48] transition-colors">Campus</a>
+      <a href="/about" class="font-bold text-sm text-[#21275a] hover:text-[#e11d48] transition-colors">About</a>
+      <a href="/faq" class="font-bold text-sm text-[#21275a] hover:text-[#e11d48] transition-colors">FAQs</a>
+      
+      <a href="/register" class="font-black text-xs uppercase tracking-widest bg-[#e11d48] text-white px-8 py-3.5 rounded-full hover:bg-[#be123c] transition-all transform hover:scale-105 shadow-lg shadow-[#e11d48]/20">
         Register for ISAT
       </a>
     </div>
 
-    <button id="mobile-menu-btn" class="lg:hidden text-[#21275a]">
+    <button id="mobile-menu-btn" class="lg:hidden text-[#21275a] p-2 hover:bg-gray-100 rounded-lg">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
     </button>
   </nav>
@@ -101,7 +90,7 @@ const { title, description = "IIAT Hyderabad — Indian Institute of Advanced Te
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
       <div class="space-y-6">
         <a href="/">
-          <img src="/logo-iiat.png" alt="IIAT Hyderabad" class="h-16 w-auto object-contain" />
+          <img src="/new-logo.jpg" alt="IIAT - Indian Institute of Advanced Technologies" class="h-16 w-auto object-contain" />
         </a>
         <p class="text-white/60 text-sm leading-relaxed">Indian Institute of Advanced Technologies — Where Curiosity Becomes Capability. India's most industry-integrated B.Tech program.</p>
         <div class="flex gap-3">
