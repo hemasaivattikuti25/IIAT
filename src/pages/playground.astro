@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="AI Playground | IIAT Hyderabad">
+  <section class="bg-white py-28 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="inline-block bg-[#f7ba26]/20 text-[#21275a] text-xs font-extrabold uppercase tracking-widest px-5 py-2 rounded-full mb-4">Interactive</div>
+      <h1 class="text-5xl md:text-6xl font-black text-[#21275a] mb-6">AI Playground</h1>
+      <p class="text-xl text-[#21275a]/70 max-w-3xl mx-auto mb-12">Experience the power of AI tools used in IIAT's curriculum. Try these demos to see what you'll build.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 text-left mb-16">
+        {[
+          { title: "AI Image Generator", desc: "Generate images using diffusion models — the same tech used in DALL-E and Midjourney.", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>` },
+          { title: "Code Assistant", desc: "Ask our AI code assistant any programming question. Python, JavaScript, C++ — all supported.", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>` },
+          { title: "Data Visualizer", desc: "Upload a CSV and let AI generate insights, charts, and analysis automatically.", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>` },
+        ].map(tool => (
+          <div class="border-2 border-[#21275a]/10 rounded-2xl p-8 hover:border-[#b00f1e] hover:shadow-xl transition-all cursor-pointer group">
+            <div class="w-12 h-12 rounded-xl bg-[#b00f1e]/10 flex items-center justify-center mb-6 group-hover:bg-[#b00f1e] transition-colors">
+              <svg class="w-6 h-6 text-[#b00f1e] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><Fragment set:html={tool.icon} /></svg>
+            </div>
+            <h3 class="font-black text-lg text-[#21275a] mb-3">{tool.title}</h3>
+            <p class="text-[#21275a]/70 text-sm leading-relaxed">{tool.desc}</p>
+            <div class="mt-6 inline-flex items-center gap-2 text-[#b00f1e] font-bold text-sm">
+              Try It <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-[#21275a] rounded-3xl p-12 text-white">
+        <h2 class="text-3xl font-black mb-4">Want to Build This Yourself?</h2>
+        <p class="text-white/70 mb-8 max-w-2xl mx-auto">At IIAT, students build real AI applications from Semester 1. Join us and go from curious to capable.</p>
+        <a href="/register" class="inline-block bg-[#f7ba26] text-[#21275a] font-extrabold px-10 py-4 rounded-xl hover:bg-white transition-colors">Register for ISAT — Free</a>
+      </div>
+    </div>
+  </section>
+</Layout>

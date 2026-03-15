@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="B.Tech Programs | IIAT Hyderabad">
+  <section class="bg-white py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-[#f7ba26]/20 text-[#21275a] text-xs font-extrabold uppercase tracking-widest px-5 py-2 rounded-full mb-4">Specializations</div>
+        <h1 class="text-5xl md:text-6xl font-black text-[#21275a] mb-6">Your Degree, Your Specialization</h1>
+        <p class="text-xl text-[#21275a]/70 max-w-3xl mx-auto">B.Tech in Computer Science Engineering — 6 industry-focused specializations. No JEE required.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: "AI & Data Science", seats: "180 Seats", code: "CSE-AI-DS", slug: "btech-ai-ds", desc: "Build intelligent systems that learn and adapt. Master machine learning, deep learning, and data engineering." },
+          { title: "FinTech & Artificial Intelligence", seats: "60 Seats", code: "CSE-FT", slug: "btech-fintech", desc: "Combine finance and AI to build next-generation banking, payments, and investment technology." },
+          { title: "Cyber Security with AI/ML", seats: "60 Seats", code: "CSE-CY", slug: "btech-cyber", desc: "Protect the digital world using advanced security practices enhanced by AI and machine learning." },
+          { title: "Core CSE", seats: "180 Seats", code: "CSE-CORE", slug: "btech-core", desc: "A comprehensive foundation in computer science engineering with modern industry-integrated curriculum." },
+          { title: "AI & Machine Learning", seats: "180 Seats", code: "CSE-AI-ML", slug: "btech-ai-ml", desc: "Deep dive into artificial intelligence, neural networks, and machine learning engineering." },
+          { title: "Biomedical Engineering, AI & Medical Robotics", seats: "60 Seats", code: "BME", slug: "btech-biomedical", desc: "Merge biology, medicine, and technology to build the future of healthcare and medical devices." },
+        ].map((p, i) => (
+          <a href={`/programs/${p.slug}`}
+            class="group border-2 border-[#21275a]/10 rounded-2xl p-8 flex flex-col bg-white hover:border-[#b00f1e] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="flex items-start justify-between mb-6">
+              <span class="text-5xl font-black text-[#21275a]/10 group-hover:text-[#b00f1e]/20 transition-colors">0{i+1}</span>
+              <span class="text-xs font-extrabold text-[#21275a]/40 bg-[#21275a]/5 px-3 py-1 rounded-lg">{p.code}</span>
+            </div>
+            <h3 class="text-lg font-black text-[#21275a] mb-2">{p.title}</h3>
+            <p class="text-[#21275a]/60 text-sm leading-relaxed mb-6 flex-1">{p.desc}</p>
+            <div class="flex items-center justify-between">
+              <span class="inline-block px-4 py-1.5 bg-[#f7ba26]/20 text-[#21275a] font-extrabold rounded-lg text-sm">{p.seats}</span>
+              <svg class="w-5 h-5 text-[#21275a]/30 group-hover:text-[#b00f1e] group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-16 bg-[#b00f1e] rounded-3xl p-12 text-center text-white">
+        <h2 class="text-3xl font-black mb-4">Not Sure Which Program?</h2>
+        <p class="text-white/80 mb-8">Our counsellors will help you choose the right specialization based on your interests and career goals.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact" class="inline-block bg-white text-[#b00f1e] font-extrabold px-10 py-4 rounded-xl hover:bg-[#f7ba26] hover:text-[#21275a] transition-colors">Talk to a Counsellor</a>
+          <a href="/register" class="inline-block border-2 border-white text-white font-bold px-10 py-4 rounded-xl hover:bg-white/10 transition-colors">Register for ISAT — Free</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

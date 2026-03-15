@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const prog = {
+  title: "B.Tech CSE (AI & Data Science)",
+  seats: "180 Seats",
+  duration: "4 Years",
+  code: "CSE-AI-DS",
+  desc: "Build intelligent systems that learn, adapt, and transform industries. Master machine learning, deep learning, NLP, computer vision, and data engineering.",
+  highlights: ["Python & Advanced ML from Semester 1","Real-world Data Science Projects","Industry Externship Program","Access to GPU Computing Labs","Sessions by MAANG Data Scientists","Specialization in GenAI & LLMs"],
+  curriculum: [
+    { sem: "Semester 1–2", topics: "Programming Fundamentals, Mathematics for AI, Data Structures, Statistics" },
+    { sem: "Semester 3–4", topics: "Machine Learning, Database Systems, Python for Data Science, Probability" },
+    { sem: "Semester 5–6", topics: "Deep Learning, NLP, Computer Vision, Big Data Engineering" },
+    { sem: "Semester 7–8", topics: "GenAI & LLMs, Industry Project, Placement Prep, Research Electives" },
+  ]
+};
+---
+<Layout title={`${prog.title} | IIAT Hyderabad`}>
+  <section class="bg-[#21275a] py-28 px-6 relative overflow-hidden">
+    <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 50px 50px;"></div>
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="inline-block bg-[#f7ba26]/20 text-[#f7ba26] text-xs font-extrabold uppercase tracking-widest px-5 py-2 rounded-full mb-6">{prog.code} — {prog.seats}</div>
+      <h1 class="text-4xl md:text-6xl font-black text-white mb-6">{prog.title}</h1>
+      <p class="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">{prog.desc}</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/register" class="bg-[#b00f1e] text-white font-extrabold px-8 py-4 rounded-xl hover:bg-[#8a0c17] transition-all transform hover:scale-105">Register for ISAT — Free</a>
+        <a href="/contact" class="border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl hover:border-white transition-colors">Download Brochure</a>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-black text-[#21275a] mb-8">Program Highlights</h2>
+        <ul class="space-y-4">
+          {prog.highlights.map(h => (
+            <li class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-[#b00f1e]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5 text-[#b00f1e]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span class="font-semibold text-[#21275a]">{h}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-3xl font-black text-[#21275a] mb-8">Curriculum Overview</h2>
+        <div class="space-y-4">
+          {prog.curriculum.map(c => (
+            <div class="border-l-4 border-[#f7ba26] pl-5">
+              <div class="font-black text-sm text-[#b00f1e] uppercase tracking-wide mb-1">{c.sem}</div>
+              <div class="text-[#21275a]/70 text-sm">{c.topics}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#b00f1e] py-16 px-6 text-center">
+    <h2 class="text-3xl font-black text-white mb-4">Ready to Join?</h2>
+    <p class="text-white/80 mb-8">Register for ISAT today — it's free, no JEE required.</p>
+    <a href="/register" class="inline-block bg-white text-[#b00f1e] font-extrabold px-12 py-4 rounded-xl hover:bg-[#f7ba26] hover:text-[#21275a] transition-colors">Register for ISAT — Free</a>
+  </section>
+</Layout>

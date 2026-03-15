@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Campus Life | IIAT Hyderabad">
+  <section class="bg-white py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-[#f7ba26]/20 text-[#21275a] text-xs font-extrabold uppercase tracking-widest px-5 py-2 rounded-full mb-4">Campus Life</div>
+        <h1 class="text-5xl md:text-6xl font-black text-[#21275a] mb-6">Experience Life at Campus</h1>
+        <p class="text-xl text-[#21275a]/70 max-w-3xl mx-auto">Two world-class campuses, one transformative experience.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        {[
+          { name: "SSAHE", full: "Sri Siddhartha Academy of Higher Education", location: "Tumkur, Karnataka", img: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80", features: ["Advanced Computer Labs","AI Research Centre","Sports Complex","Wi-Fi Campus","Cafeteria & Canteen","Library with 50,000+ Books"] },
+          { name: "MRDU", full: "Malla Reddy Deemed to be University", location: "Hyderabad, Telangana", img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", features: ["Innovation Hub","Industry Labs","Auditorium","Hostel Facilities","Health Centre","Sports Academy"] },
+        ].map(campus => (
+          <div class="rounded-3xl overflow-hidden border-2 border-[#21275a]/10">
+            <div class="relative h-64 overflow-hidden">
+              <img src={campus.img} alt={campus.full} class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#21275a]/80 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <div class="inline-block bg-[#f7ba26] text-[#21275a] text-xs font-black uppercase tracking-widest px-3 py-1 rounded-lg mb-2">{campus.name}</div>
+                <h3 class="text-white font-black text-xl">{campus.full}</h3>
+                <p class="text-white/70 text-sm">{campus.location}</p>
+              </div>
+            </div>
+            <div class="p-8">
+              <h4 class="font-bold text-[#21275a] mb-4">Campus Facilities</h4>
+              <ul class="grid grid-cols-2 gap-3">
+                {campus.features.map(f => (
+                  <li class="flex items-center gap-2 text-sm text-[#21275a]/70">
+                    <svg class="w-4 h-4 text-[#b00f1e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-[#21275a] rounded-3xl p-12 text-center text-white">
+        <h2 class="text-3xl font-black mb-4">Visit Our Campus</h2>
+        <p class="text-white/70 mb-8 max-w-2xl mx-auto">Schedule a campus tour and experience IIAT firsthand. See our labs, meet current students, and talk to faculty.</p>
+        <a href="/contact" class="inline-block bg-[#f7ba26] text-[#21275a] font-extrabold px-10 py-4 rounded-xl hover:bg-white transition-colors">Schedule a Tour</a>
+      </div>
+    </div>
+  </section>
+</Layout>

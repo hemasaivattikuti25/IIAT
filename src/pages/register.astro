@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Register for ISAT | IIAT Hyderabad">
+  <section class="bg-white py-28 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-block bg-[#f7ba26]/20 text-[#21275a] text-xs font-extrabold uppercase tracking-widest px-5 py-2 rounded-full mb-4">Free Registration</div>
+        <h1 class="text-5xl md:text-6xl font-black text-[#21275a] mb-6">Register for ISAT</h1>
+        <p class="text-xl text-[#21275a]/70">IIAT Scholarship Assessment Test — Free, No JEE required. Takes 10 minutes to register.</p>
+      </div>
+
+      <div class="bg-[#21275a]/5 rounded-3xl p-10">
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-bold text-[#21275a] mb-2">First Name</label>
+              <input type="text" placeholder="First name" class="w-full border-2 border-[#21275a]/10 rounded-xl px-5 py-3 text-[#21275a] focus:outline-none focus:border-[#b00f1e] transition-colors bg-white" />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-[#21275a] mb-2">Last Name</label>
+              <input type="text" placeholder="Last name" class="w-full border-2 border-[#21275a]/10 rounded-xl px-5 py-3 text-[#21275a] focus:outline-none focus:border-[#b00f1e] transition-colors bg-white" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-[#21275a] mb-2">Email Address</label>
+            <input type="email" placeholder="your@email.com" class="w-full border-2 border-[#21275a]/10 rounded-xl px-5 py-3 text-[#21275a] focus:outline-none focus:border-[#b00f1e] transition-colors bg-white" />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-[#21275a] mb-2">Mobile Number</label>
+            <input type="tel" placeholder="+91 XXXXX XXXXX" class="w-full border-2 border-[#21275a]/10 rounded-xl px-5 py-3 text-[#21275a] focus:outline-none focus:border-[#b00f1e] transition-colors bg-white" />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-[#21275a] mb-2">State</label>
+            <select class="w-full border-2 border-[#21275a]/10 rounded-xl px-5 py-3 text-[#21275a] focus:outline-none focus:border-[#b00f1e] transition-colors bg-white">
+              <option>Telangana</option>
+              <option>Andhra Pradesh</option>
+              <option>Karnataka</option>
+              <option>Tamil Nadu</option>
+              <option>Maharashtra</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-[#21275a] mb-2">Preferred Specialization</label>
+            <select class="w-full border-2 border-[#21275a]/10 rounded-xl px-5 py-3 text-[#21275a] focus:outline-none focus:border-[#b00f1e] transition-colors bg-white">
+              <option>B.Tech CSE (AI & Data Science)</option>
+              <option>B.Tech CSE (FinTech & AI)</option>
+              <option>B.Tech CSE (Cyber Security)</option>
+              <option>B.Tech CSE (Core)</option>
+              <option>B.Tech CSE (AI & ML)</option>
+              <option>B.Tech Biomedical Engineering</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-[#21275a] mb-2">Class 12 Board</label>
+            <select class="w-full border-2 border-[#21275a]/10 rounded-xl px-5 py-3 text-[#21275a] focus:outline-none focus:border-[#b00f1e] transition-colors bg-white">
+              <option>CBSE</option>
+              <option>ICSE</option>
+              <option>State Board</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full bg-[#b00f1e] text-white font-extrabold text-lg py-5 rounded-xl hover:bg-[#8a0c17] transition-all transform hover:scale-[1.02]">
+            Register for ISAT — Free
+          </button>
+          <p class="text-center text-xs text-[#21275a]/50">No JEE required. Free registration. You will receive exam details by email within 24 hours.</p>
+        </form>
+      </div>
+
+      <div class="mt-10 grid grid-cols-3 gap-4 text-center">
+        {[{ num: "Free", label: "Registration" },{ num: "60 Min", label: "Exam Duration" },{ num: "Instant", label: "Results" }].map(s => (
+          <div class="border-2 border-[#21275a]/10 rounded-2xl py-6 px-4">
+            <div class="text-2xl font-black text-[#b00f1e] mb-1">{s.num}</div>
+            <div class="text-[#21275a]/60 text-sm font-semibold">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

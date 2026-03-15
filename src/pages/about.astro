@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us | IIAT Hyderabad">
+  <section class="bg-white py-28 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-[#f7ba26]/20 text-[#21275a] text-xs font-extrabold uppercase tracking-widest px-5 py-2 rounded-full mb-4">Who We Are</div>
+        <h1 class="text-5xl md:text-6xl font-black text-[#21275a] mb-6">About IIAT Hyderabad</h1>
+        <p class="text-xl text-[#21275a]/70 max-w-3xl mx-auto leading-relaxed">Indian Institute of Advanced Technologies is redefining B.Tech education through industry integration, innovation, and accessibility.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 mb-20">
+        <div>
+          <h2 class="text-3xl font-black text-[#21275a] mb-4">Our Mission</h2>
+          <p class="text-[#21275a]/70 leading-relaxed mb-6">To make quality technical education accessible to every deserving student in India, regardless of JEE scores, by building an industry-integrated B.Tech program designed with real-world outcomes.</p>
+          <h2 class="text-3xl font-black text-[#21275a] mb-4">Our Vision</h2>
+          <p class="text-[#21275a]/70 leading-relaxed">To be India's most trusted name in industry-integrated higher education — producing graduates who don't just know technology, but can build with it from day one.</p>
+        </div>
+        <div class="bg-[#21275a] rounded-3xl p-10 text-white">
+          <h3 class="text-2xl font-black mb-8 text-[#f7ba26]">Why IIAT?</h3>
+          <ul class="space-y-5">
+            {["No JEE Required — Admission via ISAT","UGC-Recognized B.Tech Degree","Industry Engineers as Faculty","AI-First Curriculum from Semester 1","Fully Residential Campuses","Placement Support from Day 1"].map(item => (
+              <li class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-[#f7ba26]/20 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3.5 h-3.5 text-[#f7ba26]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span class="font-semibold text-sm">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[{ num: "500+", label: "Students Enrolled" },{ num: "6", label: "B.Tech Specializations" },{ num: "2", label: "University Campuses" },{ num: "100%", label: "Industry-Integrated" }].map(s => (
+          <div class="text-center border-2 border-[#21275a]/10 rounded-2xl py-8 px-4">
+            <div class="text-4xl font-black text-[#b00f1e] mb-2">{s.num}</div>
+            <div class="text-[#21275a]/70 font-semibold text-sm">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

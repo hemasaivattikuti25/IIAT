@@ -2,114 +2,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @theme {
-  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-  --font-plus-jakarta: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-  --color-brand-yellow: #f7ba26;
-  --color-brand-blue-deep: #1f3484;
-  --color-brand-red: #b00f1e;
-  --color-brand-orange: #d46324;
+  /* Strict Branding Colors */
   --color-brand-navy: #21275a;
-  --color-brand-gold: #a08b6f;
-  --color-brand-yellow-light: #fbd05a;
+  --color-brand-red: #b00f1e;
+  --color-brand-gold: #f7ba26;
+  --color-white: #ffffff;
 }
 
 /* Base styles */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-brand-red);
-  color: white;
-}
-
-/* IIAT Design System Utilities */
-.iiat-card {
-  background-color: var(--color-brand-700);
-  border: 1px solid rgba(160, 139, 111, 0.2);
-  border-radius: 1rem;
-}
-
-.iiat-card-title {
-  color: var(--color-brand-yellow);
-  font-weight: 700;
-}
-
-.iiat-card-description {
-  color: white;
-}
-
-.btn-primary {
-  background-color: var(--color-brand-yellow);
-  color: var(--color-brand-navy);
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-primary:hover {
-  background-color: white;
-  color: var(--color-brand-red);
-}
-
-.btn-secondary {
-  border: 2px solid var(--color-brand-200);
-  color: var(--color-brand-200);
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-brand-300);
-  border-color: var(--color-brand-300);
-  color: white;
-}
-
-.iiat-badge {
-  background-color: var(--color-brand-200);
-  color: var(--color-brand-600);
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-/* Animation utilities */
-.animate-fade-up {
-  animation: fadeUp 0.6s ease-out forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-white);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-brand-navy);
+    background-color: var(--color-white);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-brand-navy);
+    font-weight: 800;
   }
 }
 
-/* Marquee animation for logo ticker */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+/* Animations from Upgrad Reference */
+@layer utilities {
+  .animate-ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 30s linear infinite;
+  }
 
-.animate-marquee {
-  animation: marquee 30s linear infinite;
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .glass-hero {
+    background: rgba(33, 39, 90, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Custom Transitions */
+  .transition-content-wrapper {
+    transition: opacity 0.3s ease-in-out;
+  }
 }
 
 /* Scrollbar styling */
@@ -122,44 +65,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand-yellow);
+  background: var(--color-brand-red);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-yellow-light);
-}
-
-/* Header scroll state */
-header.header-scrolled {
-  background-color: var(--color-brand-blue-deep) !important;
-}
-
-/* Dropdown bridge - invisible area between trigger and panel to prevent hover gap */
-.dropdown-container .dropdown-panel::before {
-  content: '';
-  position: absolute;
-  top: -16px;
-  left: 0;
-  right: 0;
-  height: 16px;
-}
-
-/* Scrollbar-hide utility for horizontal scroll carousels */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* Marquee reverse direction */
-@keyframes marquee-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-.animate-marquee-reverse {
-  animation: marquee-reverse 30s linear infinite;
+  background: var(--color-brand-gold);
 }

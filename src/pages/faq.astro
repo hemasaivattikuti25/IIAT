@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="FAQs | IIAT Hyderabad">
+  <section class="bg-white py-28 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-[#f7ba26]/20 text-[#21275a] text-xs font-extrabold uppercase tracking-widest px-5 py-2 rounded-full mb-4">FAQs</div>
+        <h1 class="text-5xl md:text-6xl font-black text-[#21275a] mb-6">Frequently Asked Questions</h1>
+        <p class="text-xl text-[#21275a]/70">Everything you need to know about IIAT Hyderabad admissions.</p>
+      </div>
+
+      <div class="space-y-4" id="faq-container">
+        {[
+          { q: "What is ISAT?", a: "ISAT stands for IIAT Scholarship Assessment Test. It is free to register and does not require JEE scores. It tests logical reasoning, aptitude, and basic mathematics. Based on your ISAT score, you may also receive merit scholarships." },
+          { q: "Is JEE mandatory to join IIAT?", a: "No. JEE is NOT required. Admission is purely based on your ISAT performance. This makes quality B.Tech education accessible to every deserving student." },
+          { q: "Are the B.Tech degrees UGC recognized?", a: "Yes. All B.Tech programs are offered in partnership with UGC-recognized deemed universities — Sri Siddhartha Academy of Higher Education (SSAHE) and Malla Reddy Deemed University (MRDU). The degree is valid for all public sector PSU jobs and private sector hiring." },
+          { q: "What specializations are available?", a: "IIAT offers 6 B.Tech specializations: (1) AI & Data Science — 180 Seats, (2) FinTech & AI — 60 Seats, (3) Cyber Security with AI/ML — 60 Seats, (4) Core CSE — 180 Seats, (5) AI & Machine Learning — 180 Seats, (6) Biomedical Engineering, AI & Medical Robotics — 60 Seats." },
+          { q: "What is the fee structure?", a: "Fee structure varies by campus and program. Contact us at info@iiath.com or call +91 8688664337 for the complete fee schedule and available scholarship amounts." },
+          { q: "Is the campus residential?", a: "Yes. Both SSAHE (Tumkur) and MRDU (Hyderabad) campuses are fully residential with modern hostel facilities, 24x7 security, cafeteria, and sports infrastructure." },
+          { q: "What career support does IIAT provide?", a: "IIAT has a dedicated career cell that starts placement preparation from Semester 1. We partner with 200+ companies for internships and placements, with regular industry sessions and mock interviews." },
+          { q: "How is the curriculum different from regular B.Tech?", a: "IIAT's curriculum is AI-first and industry-integrated. Students code from Day 1, attend sessions by MAANG engineers, participate in CXO masterclasses, and work on real industry projects throughout the 4 years." },
+          { q: "Can I register for ISAT online?", a: "Yes. ISAT registration is fully online and free. Visit our registration page to sign up. The test can be taken from the comfort of your home." },
+        ].map((f, i) => (
+          <div class="bg-[#21275a]/5 rounded-2xl overflow-hidden faq-item">
+            <button
+              class="w-full flex justify-between items-center px-8 py-6 text-left font-bold text-[#21275a] hover:text-[#b00f1e] transition-colors faq-trigger"
+              data-index={i}
+            >
+              {f.q}
+              <svg class="w-5 h-5 flex-shrink-0 ml-4 transition-transform duration-300 faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+              <p class="px-8 pb-6 text-[#21275a]/70 leading-relaxed">{f.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-[#21275a] rounded-3xl p-10 text-center text-white">
+        <h2 class="text-2xl font-black mb-3">Still have questions?</h2>
+        <p class="text-white/70 mb-6">Our admissions team is available Mon-Sat, 9am-6pm IST.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+918688664337" class="inline-block bg-[#b00f1e] text-white font-extrabold px-8 py-3 rounded-xl hover:bg-[#8a0c17] transition-colors">Call: +91 8688664337</a>
+          <a href="mailto:info@iiath.com" class="inline-block bg-white/10 border border-white/20 text-white font-bold px-8 py-3 rounded-xl hover:bg-white/20 transition-colors">Email: info@iiath.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const answer = item?.querySelector('.faq-answer') as HTMLElement;
+      const icon = btn.querySelector('.faq-icon') as HTMLElement;
+      const isOpen = answer?.style.maxHeight && answer.style.maxHeight !== '0px';
+      document.querySelectorAll('.faq-answer').forEach((el: Element) => { (el as HTMLElement).style.maxHeight = '0px'; });
+      document.querySelectorAll('.faq-icon').forEach((el: Element) => { el.classList.remove('rotate-180'); });
+      if (!isOpen && answer) { answer.style.maxHeight = answer.scrollHeight + 'px'; icon?.classList.add('rotate-180'); }
+    });
+  });
+</script>
