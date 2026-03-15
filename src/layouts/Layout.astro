@@ -1,0 +1,768 @@
+---
+interface Props {
+  footerGradient?: string;
+}
+
+import '../styles/global.css';
+
+const {
+  footerGradient = '#ffffff, #ffffff, #ffffff'
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <slot name="head" />
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+</head>
+
+<body class="plus_jakarta_sans_996037cd-module__4C_XRa__variable font-sans antialiased">
+<div class="transition-content-wrapper">
+        <div class="min-h-screen flex flex-col bg-white">
+            <slot name="pre-header" />
+            <header
+                class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1f3484] backdrop-blur-md lg:bg-[#1f3484]/90">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-4">
+                    <div class="flex items-center justify-between py-2 lg:py-2 relative"><a
+                            class="flex gap-[7px] items-center" href="/"><img alt="IIAT Logo Text" loading="lazy"
+                                width="75" height="41" decoding="async" class="w-[74.669px] h-[31.146px]"
+                                style="color:transparent"
+                                src="/logo-iiat.svg" /></a>
+                        <nav class="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
+                            <div
+                                class="flex items-center gap-3 backdrop-blur-[22px] border rounded-[100px] px-2 py-2 transition-all duration-300 bg-[#21275a]/30 border-[#1f3484] mix-blend-overlay">
+                                <div class="relative dropdown-container"><a
+                                        class="block px-5 py-2 text-[14px] font-medium transition-all duration-200 rounded-[100px] tracking-[-0.112px] text-[#f7ba26] bg-[#b00f1e]/20 backdrop-blur-[32px]"
+                                        style="font-family:var(--font-plus-jakarta)" href="/about-us">About IIAT</a>
+                                </div>
+                                <div class="relative dropdown-container" data-dropdown="programs"><button
+                                        class="dropdown-trigger flex items-center gap-0.5 px-5 py-2 text-[14px] font-medium transition-all duration-200 rounded-[100px] tracking-[-0.112px] text-[#f7ba26] hover:text-[#fbd05a] hover:bg-[#b00f1e]"
+                                        style="font-family:var(--font-plus-jakarta)">Programs<svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon"
+                                            class="w-5 h-5 transition-transform dropdown-chevron">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                                        </svg></button>
+                                    <div class="dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-4 opacity-0 invisible transition-all duration-200 pointer-events-none z-50">
+                                        <div class="bg-[#21275a]/95 backdrop-blur-xl border border-[#a08b6f]/20 rounded-2xl p-6 min-w-[520px] shadow-2xl">
+                                            <div class="grid grid-cols-3 gap-6">
+                                                <div>
+                                                    <h4 class="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-3">Seed</h4>
+                                                    <ul class="space-y-2">
+                                                        <li><a href="/programs/k12" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1">School Ecosystem</a></li>
+                                                        <li><a href="/programs/k12-school" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1">Summer Bootcamp</a></li>
+                                                        <li><a href="/programs/iiath-x" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1">IIAT X</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-3">Undergraduate</h4>
+                                                    <ul class="space-y-2">
+                                                        <li><a href="/programs/ug" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1">UG Program</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-3">Executive</h4>
+                                                    <ul class="space-y-2">
+                                                        <li><a href="/programs/lead" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1">LEAD</a></li>
+                                                        <li><a href="/programs/lead-vcpe" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1">LEAD VC/PE</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative dropdown-container" data-dropdown="events"><button
+                                        class="dropdown-trigger flex items-center gap-0.5 px-5 py-2 text-[14px] font-medium transition-all duration-200 rounded-[100px] tracking-[-0.112px] text-[#f7ba26] hover:text-[#fbd05a] hover:bg-[#b00f1e]"
+                                        style="font-family:var(--font-plus-jakarta)">Events<svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon"
+                                            class="w-5 h-5 transition-transform dropdown-chevron">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                                        </svg></button>
+                                    <div class="dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-4 opacity-0 invisible transition-all duration-200 pointer-events-none z-50">
+                                        <div class="bg-[#21275a]/95 backdrop-blur-xl border border-[#a08b6f]/20 rounded-2xl p-5 min-w-[200px] shadow-2xl">
+                                            <ul class="space-y-2">
+                                                <li><a href="/events" class="text-sm text-#a08b6f hover:text-[#f7ba26] transition-colors block py-1.5">Events</a></li>
+                                                <li><a href="/upcomingevents" class="text-sm text-#a08b6f hover:text-[#f7ba26] transition-colors block py-1.5">Upcoming Events</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative dropdown-container" data-dropdown="more"><button
+                                        class="dropdown-trigger flex items-center gap-0.5 px-5 py-2 text-[14px] font-medium transition-all duration-200 rounded-[100px] tracking-[-0.112px] text-[#f7ba26] hover:text-[#fbd05a] hover:bg-[#b00f1e]"
+                                        style="font-family:var(--font-plus-jakarta)">More<svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon"
+                                            class="w-5 h-5 transition-transform dropdown-chevron">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                                        </svg></button>
+                                    <div class="dropdown-panel absolute top-full right-0 mt-4 opacity-0 invisible transition-all duration-200 pointer-events-none z-50">
+                                        <div class="bg-[#21275a]/95 backdrop-blur-xl border border-[#a08b6f]/20 rounded-2xl p-5 min-w-[200px] shadow-2xl">
+                                            <ul class="space-y-2">
+                                                <li><a href="/campus-life" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1.5">Campus Life</a></li>
+                                                <li><a href="/alumni-connect" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1.5">Alumni Connect</a></li>
+                                                <li><a href="/mentors" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1.5">Become a Mentor</a></li>
+                                                <li><a href="/partnership" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1.5">Partnership</a></li>
+                                                <li><a href="/blog" class="text-sm text-[#a08b6f] hover:text-[#f7ba26] transition-colors block py-1.5">Blog</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="hidden lg:flex items-center gap-4"><a
+                                class="px-6 py-2.5 text-[16px] font-medium transition-colors tracking-[-0.32px] text-[#f7ba26] hover:text-gray-200"
+                                style="font-family:var(--font-plus-jakarta)"
+                                href="https://iiath.edmingle.com/login">Login</a><a href="/quiz"><button
+                                    class="relative group" tabindex="0">
+                                        <div
+                                            class="relative px-6 py-2 bg-[#b00f1e] text-[#f7ba26] rounded-[999px] overflow-hidden transition-all duration-300 hover:bg-[#fbd05a] hover:text-[#1f3484]">
+                                            <span class="relative z-10 text-[14px] font-semibold leading-[24px]"
+                                                style="font-family:var(--font-plus-jakarta)">Take a quiz</span>
+                                        <div
+                                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        </div>
+                                    </div>
+                                </button></a></div><button
+                            id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg  backdrop-blur-sm  text-[#f7ba26] hover:bg-[#1f3484]/20 transition-all duration-200"><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                            </svg></button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Mobile menu overlay -->
+            <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#1f3484]/98 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+                <div class="flex flex-col h-full overflow-y-auto pt-20 px-6 pb-8">
+                    <button id="mobile-menu-close" class="absolute top-5 right-5 p-2 text-[#f7ba26] hover:bg-[#1f3484]/10 rounded-lg transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <nav class="flex flex-col gap-2">
+                        <a href="/about-us" class="text-lg text-[#f7ba26] font-medium py-3 border-b border-[#a08b6f]/20">Why IIAT</a>
+                        <details class="group border-b border-[#a08b6f]/20">
+                            <summary class="text-lg text-[#f7ba26] font-medium py-3 flex justify-between items-center cursor-pointer list-none">
+                                Programs<span class="group-open:rotate-180 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg></span>
+                            </summary>
+                            <div class="pb-4 pl-4 space-y-1">
+                                <p class="text-xs font-semibold text-purple-300 uppercase tracking-wider mt-2 mb-2">Seed</p>
+                                <a href="/programs/k12" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">School Ecosystem</a>
+                                <a href="/programs/k12-school" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Summer Bootcamp</a>
+                                <a href="/programs/iiath-x" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">IIAT X</a>
+                                <p class="text-xs font-semibold text-purple-300 uppercase tracking-wider mt-4 mb-2">Undergraduate</p>
+                                <a href="/programs/ug" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">UG Program</a>
+                                <p class="text-xs font-semibold text-purple-300 uppercase tracking-wider mt-4 mb-2">Executive</p>
+                                <a href="/programs/lead" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">LEAD</a>
+                                <a href="/programs/lead-vcpe" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">LEAD VC/PE</a>
+                            </div>
+                        </details>
+                        <details class="group border-b border-[#a08b6f]/20">
+                            <summary class="text-lg text-[#f7ba26] font-medium py-3 flex justify-between items-center cursor-pointer list-none">
+                                Events<span class="group-open:rotate-180 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg></span>
+                            </summary>
+                            <div class="pb-4 pl-4 space-y-1">
+                                <a href="/events" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Events</a>
+                                <a href="/upcomingevents" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Upcoming Events</a>
+                            </div>
+                        </details>
+                        <details class="group border-b border-[#a08b6f]/20">
+                            <summary class="text-lg text-[#f7ba26] font-medium py-3 flex justify-between items-center cursor-pointer list-none">
+                                More<span class="group-open:rotate-180 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path></svg></span>
+                            </summary>
+                            <div class="pb-4 pl-4 space-y-1">
+                                <a href="/campus-life" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Campus Life</a>
+                                <a href="/alumni-connect" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Alumni Connect</a>
+                                <a href="/mentors" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Become a Mentor</a>
+                                <a href="/partnership" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Partnership</a>
+                                <a href="/blog" class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1.5">Blog</a>
+                            </div>
+                        </details>
+                        <a href="https://iiath.edmingle.com/login" class="text-lg text-[#f7ba26] font-medium py-3 border-b border-[#a08b6f]/20">Login</a>
+                        <a href="/quiz" class="mt-4 text-center px-6 py-3 bg-[#1f3484]/10 backdrop-blur-md border border-[#a08b6f]/20 rounded-full text-[#f7ba26] font-medium transition-all duration-300 hover:bg-[#1f3484]/20">Take a quiz</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Page content -->
+            <slot />
+
+            <footer class="relative w-full px-4 py-12 md:px-8 md:py-16 lg:px-20 lg:py-20"
+                style={`background:linear-gradient(to bottom, ${footerGradient})`}>
+                <div class="mx-auto max-w-7xl">
+                    <div class="hidden lg:flex flex-col lg:flex-row gap-8 lg:gap-32">
+                        <div class="flex flex-col justify-between w-full lg:w-[722px]">
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-wrap items-center gap-2 text-xl text-[#21275a] font-normal"><a
+                                        class="hover:text-[#1f3484] transition-colors" href="#">For
+                                        Schools</a><span>/</span><a class="hover:text-[#1f3484] transition-colors"
+                                        href="#">For Businesses</a><span>/</span><a
+                                        class="hover:text-[#1f3484] transition-colors" href="/partnership">For Partners</a>
+                                </div>
+                                <div class="relative mt-8">
+                                    <div class="absolute top-0 left-0 right-0 h-px bg-[#1f3484]"></div>
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                                        <div class="flex flex-col gap-6">
+                                            <h3 class="text-sm font-bold text-[#1f3484]">Info</h3>
+                                            <ul class="flex flex-col gap-2">
+                                                <li><a class="text-sm font-medium text-[#21275a]/70 hover:text-[#1f3484] transition-colors"
+                                                        href="/about-us">About us</a></li>
+                                                <li><a class="text-sm font-medium text-[#21275a]/70 hover:text-[#1f3484] transition-colors"
+                                                        href="/campus-life">Campus Life</a></li>
+                                                <li><a class="text-sm font-medium text-[#21275a]/70 hover:text-[#1f3484] transition-colors"
+                                                        href="/partnership">Partners</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex flex-col gap-6">
+                                            <h3 class="text-sm font-bold text-[#1f3484]">Additional</h3>
+                                            <ul class="flex flex-col gap-1.5">
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/alumni-connect">Alumni connect</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/mentors">Become a mentor</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="https://blog.iiath.com/">Blogs</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex flex-col gap-6">
+                                            <h3 class="text-sm font-bold text-[#1f3484]">Programs</h3>
+                                            <ul class="flex flex-col gap-1.5">
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/programs/k12">Seed</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/programs/k12-school">Weekend Seed Online</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/programs/k12-seed">Weekend Seed</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/programs/iiath-x">IIAT X</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/programs/ug">UG Program</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/programs/lead">Lead</a></li>
+                                                <li><a class="text-sm font-medium text-#a08b6f hover:text-[#f7ba26] transition-colors"
+                                                        href="/programs/lead-vcpe">Lead VCPE</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 mt-12"><a
+                                    class="w-10 h-10 relative hover:opacity-80 transition-opacity"
+                                    href="https://www.youtube.com/@IIATSchool"><img alt="YouTube" loading="lazy"
+                                        decoding="async"
+                                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                        src="/79060aba3d89a991c13ab313684dd0a08d570623.svg" /></a><a
+                                    class="w-10 h-10 relative hover:opacity-80 transition-opacity"
+                                    href="https://www.instagram.com/iiath.seed/?igsh=a3l1dGx3bXV5bzho&amp;utm_source=qr#"><img
+                                        alt="Instagram" loading="lazy" decoding="async"
+                                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                        src="/1858cdd0666c8cc9f65734e3ec733eac4ccd464b.svg" /></a><a
+                                    class="w-10 h-10 relative hover:opacity-80 transition-opacity"
+                                    href="https://www.linkedin.com/school/iiath-school/"><img alt="LinkedIn"
+                                        loading="lazy" decoding="async"
+                                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                        src="/ec19d01664816de146b8c964a53954b568657920.svg" /></a></div>
+                        </div>
+                        <div class="flex-1 flex flex-col gap-16">
+                            <div class="flex flex-col gap-6">
+                                <div class="flex flex-col gap-4">
+                                    <h2 class="text-xl font-normal text-[#f7ba26]">Get our free mobile app!</h2>
+                                    <p class="text-base font-medium text-#a08b6f max-w-sm">Download Our Application Now
+                                        and join the IIAT Entrepreneurial Community</p>
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-3 items-start">
+                                    <div class="flex gap-3">
+                                        <div
+                                            class="w-32 h-32 rounded-2xl overflow-hidden bg-[#1f3484] flex items-center justify-center">
+                                            <img alt="IIAT App Logo" loading="lazy" width="128" height="128"
+                                                decoding="async" class="object-cover"
+                                                style="color:transparent"
+                                                src="/4da2cf3f0adbadaa077d17f23c78a83c8cb16c66.png" />
+                                        </div>
+                                        <div class="w-32 h-32 rounded-2xl overflow-hidden"><img alt="QR Code"
+                                                loading="lazy" width="128" height="128" decoding="async"
+                                                class="object-cover" style="color:transparent"
+                                                src="/3b8f869964d6a535f57d63dc93b6cea93b9ba91a.png" />
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2"><a
+                                            class="bg-[#1f3484] rounded-full h-[60px] w-[150px] flex items-center justify-center hover:opacity-90 transition-opacity"
+                                            href="#"><img alt="App Store" loading="lazy" width="135" height="40"
+                                                decoding="async" style="color:transparent"
+                                                src="/82957d39896253685589cf9e82572758fa11bd32.svg" /></a><a
+                                            class="bg-[#1f3484] rounded-full h-[60px] w-[150px] flex items-center justify-center hover:opacity-90 transition-opacity"
+                                            href="#"><img alt="Google Play" loading="lazy" width="135" height="40"
+                                                decoding="async" style="color:transparent"
+                                                src="/49fa3fd9498dbaa7d7ed0369fe2d617d3f39ef83.svg" /></a></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-6">
+                                <div class="flex flex-col gap-6">
+                                    <h2 class="text-xl font-normal text-#a08b6f">Contact us</h2>
+                                    <div class="w-60 h-px bg-#a08b6f"></div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <p class="text-base font-medium text-[#f7ba26] opacity-90">+91 8688664337</p>
+                                        <p class="text-base font-medium text-[#f7ba26] opacity-90">
+                                            info@iiath.com</p>
+                                    </div>
+                                </div>
+                                <div class="w-full aspect-[305/166] rounded-2xl overflow-hidden"><iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5568046304625!2d78.38222657504792!3d17.433044183461956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ba33af43d9%3A0x599b1ad6ab79701b!2sIIAT%20Hyderabad!5e0!3m2!1sen!2sin!4v1766529652383!5m2!1sen!2sin"
+                                        width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:hidden">
+                        <div class="flex flex-wrap items-center gap-2 text-sm text-#a08b6f font-normal mb-8"><a
+                                class="hover:text-[#f7ba26] transition-colors" href="/programs/k12-school">For
+                                Schools</a><span>/</span><a class="hover:text-[#f7ba26] transition-colors"
+                                href="/partnership">For Businesses</a><span>/</span><a
+                                class="hover:text-[#f7ba26] transition-colors" href="/partnership">For Partners</a></div>
+                        <div class="mb-8">
+                            <h2 class="text-base font-normal text-[#f7ba26] mb-2">Get our free mobile app!</h2>
+                            <p class="text-sm text-#a08b6f mb-6">Download Our Application Now and join the IIAT
+                                Community</p>
+                        </div>
+                        <div class="space-y-6 mb-8">
+                            <details class="group">
+                                <summary
+                                    class="text-sm font-medium text-[#f7ba26] flex justify-between items-center cursor-pointer list-none">
+                                    Info<span class="group-open:rotate-180 transition-transform">&#9660;</span></summary>
+                                <ul class="mt-4 space-y-2">
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/about-us">About IIAT</a></li>
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/campus-life">Campus Life</a></li>
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/partnership">Partners</a></li>
+                                </ul>
+                            </details>
+                            <details class="group">
+                                <summary
+                                    class="text-sm font-medium text-[#f7ba26] flex justify-between items-center cursor-pointer list-none">
+                                    Additional<span class="group-open:rotate-180 transition-transform">&#9660;</span>
+                                </summary>
+                                <ul class="mt-4 space-y-2">
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/alumni-connect">Alumni connect</a></li>
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/mentors">Become a mentor</a></li>
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="https://iiath.com">Blogs</a></li>
+                                </ul>
+                            </details>
+                            <details class="group">
+                                <summary
+                                    class="text-sm font-medium text-[#f7ba26] flex justify-between items-center cursor-pointer list-none">
+                                    Programs<span class="group-open:rotate-180 transition-transform">&#9660;</span></summary>
+                                <ul class="mt-4 space-y-2">
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/programs/btech">B.Tech Programs</a></li>
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/programs/ug">UG Program</a></li>
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/programs/lead">Lead</a></li>
+                                    <li><a class="text-sm text-#a08b6f hover:text-[#f7ba26] block py-1"
+                                            href="/programs/lead-vcpe">Lead VCPE</a></li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="flex gap-3 mb-8">
+                            <div class="w-24 h-24 rounded-xl overflow-hidden bg-[#1f3484] flex items-center justify-center">
+                                <img alt="IIAT Logo" loading="lazy" width="96" height="96" decoding="async" class="object-cover" style="color:transparent"
+                                    src="/logo-iiat.svg" />
+                            </div>
+                            <div class="w-24 h-24 rounded-xl overflow-hidden"><img alt="QR Code" loading="lazy"
+                                    width="96" height="96" decoding="async" class="object-cover"
+                                    style="color:transparent"
+                                    src="/3b8f869964d6a535f57d63dc93b6cea93b9ba91a.png" />
+                            </div>
+                        </div>
+                        <div class="flex gap-2 mb-8"><a
+                                class="bg-[#1f3484] rounded-full h-12 flex-1 flex items-center justify-center hover:opacity-90 transition-opacity"
+                                href="#"><img alt="App Store" loading="lazy" width="100" height="30" decoding="async" style="color:transparent"
+                                    src="/82957d39896253685589cf9e82572758fa11bd32.svg" /></a><a
+                                class="bg-[#1f3484] rounded-full h-12 flex-1 flex items-center justify-center hover:opacity-90 transition-opacity"
+                                href="#"><img alt="Google Play" loading="lazy" width="100" height="30" decoding="async" style="color:transparent"
+                                    src="/49fa3fd9498dbaa7d7ed0369fe2d617d3f39ef83.svg" /></a></div>
+                        <div class="mb-8">
+                            <h3 class="text-sm font-medium text-[#f7ba26] mb-4">Contact us</h3>
+                            <div class="text-sm text-#a08b6f">
+                                <p>+91 8688664337</p>
+                                <p>info@iiath.com</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 justify-center mb-8"><a
+                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+                                href="https://www.youtube.com/@IIATSchool"><span
+                                    class="text-[#f7ba26] text-lg">YT</span></a><a
+                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+                                href="https://www.instagram.com/iiath.seed/?igsh=a3l1dGx3bXV5bzho&amp;utm_source=qr#"><span
+                                    class="text-[#f7ba26] text-lg">IG</span></a><a
+                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+                                href="https://www.whatsapp.com/channel/0029Vb7v6FXGzzKKLCIDxo1T"><span
+                                    class="text-[#f7ba26] text-lg">WA</span></a><a
+                                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+                                href="https://www.linkedin.com/school/iiath-school/"><span
+                                    class="text-[#f7ba26] text-lg">in</span></a></div>
+                        <div class="w-full aspect-[16/9] rounded-xl overflow-hidden mb-8"><iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5568046304625!2d78.38222657504792!3d17.433044183461956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ba33af43d9%3A0x599b1ad6ab79701b!2sIIAT%20Hyderabad!5e0!3m2!1sen!2sin!4v1766529652383!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe></div>
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row gap-4 items-center justify-center mt-8 pt-8 border-t border-[#a08b6f]/20 text-xs text-[#a08b6f]">
+                        <span class="opacity-50">&copy; 2025 — Copyright</span>
+                        <div class="flex gap-4"><a class="opacity-50 hover:opacity-75 transition-opacity"
+                                href="/terms">Terms</a><a class="opacity-50 hover:opacity-75 transition-opacity"
+                                href="/privacy">Privacy</a></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div style="position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);width:150vmax;height:150vmax;z-index:9999;display:none;pointer-events:none"
+        class="page-transition-overlay"></div>
+    <div id="transition-elements-container"
+        style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:9990;pointer-events:none"></div>
+    <div style="position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);z-index:10000;display:none;pointer-events:none"
+        class="transition-loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+<script>
+  // ===== 1. SCROLL-TRIGGERED REVEAL ANIMATIONS =====
+  (function initRevealAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    // Observe elements that have inline opacity:0 with transform
+    function observeRevealElements() {
+      document.querySelectorAll('[style]').forEach(el => {
+        const style = el.getAttribute('style') || '';
+        if (style.includes('opacity:0') && (style.includes('translate') || style.includes('scale'))) {
+          // Skip elements inside <head> or script tags
+          if (el.closest('head') || el.tagName === 'SCRIPT') return;
+          observer.observe(el);
+        }
+      });
+    }
+
+    // Run on load and after any dynamic content changes
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', observeRevealElements);
+    } else {
+      observeRevealElements();
+    }
+  })();
+
+  // ===== 2. HEADER SCROLL BACKGROUND TOGGLE =====
+  (function initHeaderScroll() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    let lastScrollY = 0;
+    const SCROLL_THRESHOLD = 50;
+
+    function updateHeader() {
+      const scrollY = window.scrollY;
+      if (scrollY > SCROLL_THRESHOLD) {
+        header.classList.add('header-scrolled');
+        header.classList.remove('lg:bg-transparent', 'lg:backdrop-blur-none');
+      } else {
+        header.classList.remove('header-scrolled');
+        header.classList.add('lg:bg-transparent', 'lg:backdrop-blur-none');
+      }
+      lastScrollY = scrollY;
+    }
+
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+  })();
+
+  // ===== 3. MOBILE MENU TOGGLE =====
+  (function initMobileMenu() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const closeBtn = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (!toggleBtn || !mobileMenu) return;
+
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+      document.body.style.overflow = '';
+    }
+
+    toggleBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+    // Close on link click (but not on details/summary)
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  })();
+
+  // ===== 4. DESKTOP DROPDOWN MENUS =====
+  (function initDropdowns() {
+    const containers = document.querySelectorAll('.dropdown-container[data-dropdown]');
+    let activeDropdown = null;
+    let hoverTimeout = null;
+
+    containers.forEach(container => {
+      const trigger = container.querySelector('.dropdown-trigger');
+      const panel = container.querySelector('.dropdown-panel');
+      const chevron = container.querySelector('.dropdown-chevron');
+      if (!trigger || !panel) return;
+
+      function open() {
+        // Close any other open dropdown
+        if (activeDropdown && activeDropdown !== container) {
+          closeDropdown(activeDropdown);
+        }
+        clearTimeout(hoverTimeout);
+        panel.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+        panel.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+        activeDropdown = container;
+      }
+
+      function close() {
+        panel.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        panel.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+        if (chevron) chevron.style.transform = '';
+        if (activeDropdown === container) activeDropdown = null;
+      }
+
+      // Hover behavior on desktop
+      container.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024) open();
+      });
+
+      container.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 1024) {
+          hoverTimeout = setTimeout(() => close(), 150);
+        }
+      });
+
+      // Click behavior (for touch devices using desktop layout)
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (panel.classList.contains('opacity-0')) {
+          open();
+        } else {
+          close();
+        }
+      });
+    });
+
+    function closeDropdown(container) {
+      const panel = container.querySelector('.dropdown-panel');
+      const chevron = container.querySelector('.dropdown-chevron');
+      if (panel) {
+        panel.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        panel.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+      }
+      if (chevron) chevron.style.transform = '';
+      if (activeDropdown === container) activeDropdown = null;
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (activeDropdown && !activeDropdown.contains(e.target)) {
+        closeDropdown(activeDropdown);
+      }
+    });
+  })();
+
+  // ===== 5. CALENDLY POPUP TRIGGERS =====
+  (function initCalendly() {
+    // Attach to any button/link with data-calendly-url
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-calendly-url]');
+      if (btn && typeof Calendly !== 'undefined') {
+        e.preventDefault();
+        Calendly.initPopupWidget({ url: btn.getAttribute('data-calendly-url') });
+      }
+    });
+  })();
+
+  // ===== 6. HERO IMAGE SLIDESHOW =====
+  (function initHeroSlideshow() {
+    // Find hero slideshow containers (multiple absolute-positioned images with transition-opacity)
+    const heroContainers = document.querySelectorAll('.relative.w-full.pt-20.overflow-hidden > .absolute.inset-0.z-0');
+    heroContainers.forEach(container => {
+      const slides = container.querySelectorAll(':scope > .absolute.inset-0.transition-opacity');
+      if (slides.length <= 1) return;
+
+      let currentIndex = 0;
+      setInterval(() => {
+        slides[currentIndex].style.opacity = '0';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.opacity = '1';
+      }, 5000);
+    });
+  })();
+
+  // ===== 7. STICKY SECTION NAV SCROLL-SPY =====
+  (function initSectionNav() {
+    const navButtons = document.querySelectorAll('button[data-section]');
+    if (navButtons.length === 0) return;
+
+    // Click handler: scroll to section
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sectionId = btn.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Scroll-spy: highlight active section button
+    const sectionIds = Array.from(navButtons).map(btn => btn.getAttribute('data-section'));
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    if (sections.length === 0) return;
+
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navButtons.forEach(btn => {
+            const underline = btn.querySelector('span');
+            if (btn.getAttribute('data-section') === id) {
+              btn.classList.add('text-[#f7ba26]');
+              btn.classList.remove('text-#a08b6f');
+              if (underline) {
+                underline.classList.remove('opacity-0', 'scale-x-0');
+                underline.classList.add('opacity-100', 'scale-x-100');
+              }
+            } else {
+              btn.classList.remove('text-[#f7ba26]');
+              btn.classList.add('text-#a08b6f');
+              if (underline) {
+                underline.classList.add('opacity-0', 'scale-x-0');
+                underline.classList.remove('opacity-100', 'scale-x-100');
+              }
+            }
+          });
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+
+    sections.forEach(section => spyObserver.observe(section));
+  })();
+
+  // ===== 8. HORIZONTAL SCROLL CAROUSEL =====
+  (function initCarousels() {
+    document.querySelectorAll('.overflow-x-auto.scroll-smooth.snap-x').forEach(scrollContainer => {
+      const parent = scrollContainer.closest('.relative');
+      if (!parent) return;
+
+      const prevBtn = parent.querySelector('button:has(svg path[d*="15.75"])');
+      const nextBtn = parent.querySelector('button:has(svg path[d*="8.25"])');
+      if (!prevBtn && !nextBtn) return;
+
+      const scrollAmount = scrollContainer.offsetWidth * 0.8;
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+      }
+    });
+  })();
+
+  // ===== 9. FAQ ACCORDIONS =====
+  // Note: Most FAQ sections use native <details>/<summary> which work without JS.
+  // This handles any custom accordion patterns with data-accordion attributes.
+  (function initAccordions() {
+    document.querySelectorAll('[data-accordion-trigger]').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const content = trigger.nextElementSibling;
+        const icon = trigger.querySelector('[data-accordion-icon]');
+        if (!content) return;
+
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        if (isOpen) {
+          content.style.maxHeight = '0px';
+          content.style.overflow = 'hidden';
+          if (icon) icon.style.transform = '';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.overflow = 'hidden';
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  })();
+
+  // ===== 10. VIDEO PLAY BUTTON =====
+  (function initVideoPlayers() {
+    document.querySelectorAll('[data-video-play]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const videoUrl = btn.getAttribute('data-video-url');
+        const container = btn.closest('.relative');
+        if (!container || !videoUrl) return;
+
+        // Replace thumbnail with iframe
+        const iframe = document.createElement('iframe');
+        iframe.src = videoUrl + (videoUrl.includes('?') ? '&' : '?') + 'autoplay=1';
+        iframe.className = 'absolute inset-0 w-full h-full';
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media');
+        iframe.setAttribute('allowfullscreen', '');
+
+        // Hide thumbnail and play button
+        btn.style.display = 'none';
+        const thumbnail = container.querySelector('img');
+        if (thumbnail) thumbnail.style.display = 'none';
+
+        container.appendChild(iframe);
+      });
+    });
+  })();
+</script>
+
+</body>
+
+</html>

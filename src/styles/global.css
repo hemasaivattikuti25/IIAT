@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-plus-jakarta: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-brand-100: #fbd05a;
+  --color-brand-200: #f7ba26;
+  --color-brand-300: #d46324;
+  --color-brand-400: #a08b6f;
+  --color-brand-500: #b00f1e;
+  --color-brand-600: #1f3484;
+  --color-brand-700: #21275a;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: var(--color-brand-600);
+}
+
+/* IIAT Design System Utilities */
+.iiat-card {
+  background-color: var(--color-brand-700);
+  border: 1px solid rgba(160, 139, 111, 0.2);
+  border-radius: 1rem;
+}
+
+.iiat-card-title {
+  color: var(--color-brand-200);
+  font-weight: 700;
+}
+
+.iiat-card-description {
+  color: var(--color-brand-400);
+}
+
+.btn-primary {
+  background-color: var(--color-brand-500);
+  color: var(--color-brand-200);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-100);
+  color: var(--color-brand-600);
+}
+
+.btn-secondary {
+  border: 2px solid var(--color-brand-200);
+  color: var(--color-brand-200);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-brand-300);
+  border-color: var(--color-brand-300);
+  color: white;
+}
+
+.iiat-badge {
+  background-color: var(--color-brand-200);
+  color: var(--color-brand-600);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Animation utilities */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Marquee animation for logo ticker */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-700);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-200);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-100);
+}
+
+/* Header scroll state */
+header.header-scrolled {
+  background-color: rgba(31, 52, 132, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Dropdown bridge - invisible area between trigger and panel to prevent hover gap */
+.dropdown-container .dropdown-panel::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+/* Scrollbar-hide utility for horizontal scroll carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Marquee reverse direction */
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+}
