@@ -1,13 +1,20 @@
 ---
 interface Props {
+  title?: string;
+  description?: string;
   footerGradient?: string;
 }
 
 import '../styles/global.css';
 
 const {
+  title = 'IIAT Hyderabad | Where Curiosity Becomes Capability',
+  description = 'Indian Institute of Advanced Technologies — India\'s most industry-integrated B.Tech programs. No JEE required. Register for ROGER SAT.',
   footerGradient = '#ffffff, #ffffff, #ffffff'
 } = Astro.props;
+
+const siteUrl = 'https://iiat-production.up.railway.app';
+const ogImage = `${siteUrl}/og-image.png`;
 ---
 
 <!DOCTYPE html>
@@ -16,6 +23,24 @@ const {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={siteUrl + Astro.url.pathname} />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={siteUrl + Astro.url.pathname} />
+    <meta property="og:site_name" content="IIAT Hyderabad" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <slot name="head" />
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />

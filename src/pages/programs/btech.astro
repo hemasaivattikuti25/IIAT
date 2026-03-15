@@ -2,267 +2,283 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout footerGradient="#ffffff, #ffffff, #ffffff">
-  <Fragment slot="head">
-    <title>B.Tech in CS & Advanced Technologies | IIAT Hyderabad</title>
-    <meta name="description" content="India's first school of advanced technologies offering world-class B.Tech programs in AI, Data Science, and Robotics. Government recognized degree with IIAT certification." />
-    <meta name="keywords" content="B.Tech CSE AI Data Science, B.Tech Fintech, B.Tech Cyber Security, Biomedical Engineering AI, IIAT Hyderabad" />
-  </Fragment>
+<Layout title="B.Tech Programs | IIAT Hyderabad">
 
-  <main class="flex-1 bg-[#b00f1e]">
-    <!-- Hero Section -->
-    <section class="relative py-20 px-4 md:px-10 lg:px-20 bg-[#b00f1e] overflow- ">
-      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-        <div class="flex-1 z-10">
-          <span class="inline-block py-1 px-3 rounded-full bg-[#f7ba26]/20 text-[#f7ba26] text-sm font-bold mb-4 uppercase tracking-wider">New Batch 2026</span>
-          <h1 class="text-4xl md:text-6xl font-black text-[#21275a] leading-tight mb-6">
-            Where Curiosity <br/><span class="text-[#f7ba26]">Becomes Capability.</span>
-          </h1>
-          <p class="text-lg text-[#21275a]/90 mb-8 max-w-2xl">
-            Empowering engineers with a world-class degree and industry-integrated curriculum designed for the future. Grounded in fundamentals, engineered for impact.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="#apply" class="btn-primary py-4 px-8 text-lg">Register for ROGER SAT</a>
-            <a href="#curriculum" class="btn-secondary py-4 px-8 text-lg border-white text-[#21275a]">View Curriculum</a>
-          </div>
-        </div>
-        <div class="flex-1 relative">
-           <!-- Decorative elements instead of black placeholders -->
-           <div class="w-full aspect-square bg-[#b00f1e]/5 rounded-3xl flex items-center justify-center p-8 border border-[#b00f1e]/10 shadow-xl">
-             <div class="grid grid-cols-2 gap-4 w-full h-full">
-                <div class="bg-white rounded-2xl p-6 flex flex-col justify-end">
-                  <div class="text-[#21275a] font-bold text-2xl">AI</div>
-                  <div class="text-[#21275a]/60 text-xs">Intelligence</div>
-                </div>
-                <div class="bg-[#f7ba26] rounded-2xl p-6 flex flex-col justify-end">
-                  <div class="text-[#21275a] font-bold text-2xl">Data</div>
-                  <div class="text-[#21275a]/60 text-xs">Science</div>
-                </div>
-                <div class="bg-[#d46324] rounded-2xl p-6 flex flex-col justify-end">
-                  <div class="text-[#21275a] font-bold text-2xl">Cyber</div>
-                  <div class="text-[#21275a]/60 text-xs">Security</div>
-                </div>
-                <div class="bg-[#b00f1e] rounded-2xl p-6 flex flex-col justify-end">
-                  <div class="text-[#21275a] font-bold text-2xl">Med</div>
-                  <div class="text-[#21275a]/60 text-xs">Robotics</div>
-                </div>
-             </div>
-           </div>
-        </div>
+  <!-- HERO -->
+  <section class="bg-white pt-28 pb-16 px-6 border-b-2 border-[#21275a]/10">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="inline-block px-5 py-2 rounded-full bg-[#f7ba26]/20 text-[#21275a] text-sm font-bold uppercase tracking-wide mb-6">
+        B.Tech Programs 2025–26
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-[#21275a] mb-6 leading-tight">
+        Choose Your <span class="text-[#b00f1e]">B.Tech Specialization</span>
+      </h1>
+      <p class="text-xl text-[#21275a] max-w-3xl mx-auto mb-10">
+        All programs are 4-year, full-time B.Tech degrees affiliated to a recognized university. No JEE required — admission via ROGER SAT.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#programs" class="inline-flex px-10 py-4 bg-[#b00f1e] text-white font-bold rounded-xl hover:bg-[#8a0c17] transition-colors">
+          View All Programs
+        </a>
+        <a href="/#apply" class="inline-flex px-10 py-4 border-2 border-[#21275a] text-[#21275a] font-bold rounded-xl hover:bg-[#21275a] hover:text-white transition-colors">
+          Register for ROGER SAT
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- USPS Section -->
-    <section class="py-20 px-4 md:px-10 lg:px-20 bg-white text-[#21275a] overflow- ">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-[#21275a]xl font-bold mb-4">USPs of IIAT B.Tech Programs</h2>
-          <div class="w-24 h-1 bg-[#b00f1e] mx-auto"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- USP 1 -->
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-            <div class="w-12 h-12 bg-[#f7ba26] rounded-xl flex items-center justify-center mb-6 text-[#21275a] font-bold text-xl">01</div>
-            <h3 class="text-xl font-bold mb-4 text-[#f7ba26]">World-Class Degree, Zero Compromise</h3>
-            <p class="text-[#21275a]/70 text-sm leading-relaxed">
-              A UGC-MHRD recognized University degree empowered with an IIAT industry certification—valid for government jobs, MS abroad, PSUs, and corporate hiring simultaneously.
-            </p>
-          </div>
-          <!-- USP 2 -->
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-             <div class="w-12 h-12 bg-[#f7ba26] rounded-xl flex items-center justify-center mb-6 text-[#21275a] font-bold text-xl">02</div>
-             <h3 class="text-xl font-bold mb-4 text-[#f7ba26]">International Standard Curriculum</h3>
-             <p class="text-[#21275a]/70 text-sm leading-relaxed">
-               Designed with IIT alumni and global product engineers. CS fundamentals (DSA, OS, Systems) layered with AI, Software, and Hardware specializations.
-             </p>
-          </div>
-          <!-- USP 3 -->
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-             <div class="w-12 h-12 bg-[#f7ba26] rounded-xl flex items-center justify-center mb-6 text-[#21275a] font-bold text-xl">03</div>
-             <h3 class="text-xl font-bold mb-4 text-[#f7ba26]">A Portfolio That Speaks</h3>
-             <p class="text-[#21275a]/70 text-sm leading-relaxed">
-               5,000+ hours of hands-on coding, 50+ production-grade projects. Graduate with live open-source contributions and shipped products.
-             </p>
-          </div>
-          <!-- USP 4 -->
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-             <div class="w-12 h-12 bg-[#f7ba26] rounded-xl flex items-center justify-center mb-6 text-[#21275a] font-bold text-xl">04</div>
-             <h3 class="text-xl font-bold mb-4 text-[#f7ba26]">Global Competitive Spirit</h3>
-             <p class="text-[#21275a]/70 text-sm leading-relaxed">
-               Dedicated tracks for ACM ICPC, LeetCode, and Codeforces. GSoC mentorship and open-source contribution programs to earn international recognition.
-             </p>
-          </div>
-          <!-- USP 5 -->
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-             <div class="w-12 h-12 bg-[#f7ba26] rounded-xl flex items-center justify-center mb-6 text-[#21275a] font-bold text-xl">05</div>
-             <h3 class="text-xl font-bold mb-4 text-[#f7ba26]">Job-Ready from Year 2</h3>
-             <p class="text-[#21275a]/70 text-sm leading-relaxed">
-               Structured internships begin in the second year. Global exposure, CXO interactions, and clear paths to PPOs well before graduation.
-             </p>
-          </div>
-          <!-- USP 6 -->
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-             <div class="w-12 h-12 bg-[#f7ba26] rounded-xl flex items-center justify-center mb-6 text-[#21275a] font-bold text-xl">06</div>
-             <h3 class="text-xl font-bold mb-4 text-[#f7ba26]">Elite Mentorship for All</h3>
-             <p class="text-[#21275a]/70 text-sm leading-relaxed">
-               IIT-calibre mentorship for Tier 2/3 cities. Merit-based scholarships and in-house incubator for creator-preneurs and future founders.
-             </p>
-          </div>
-        </div>
+  <!-- KEY FACTS -->
+  <section class="bg-white py-12 px-6 border-b-2 border-[#21275a]/10">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-3xl font-extrabold text-[#b00f1e] mb-1">4 Years</div>
+        <div class="text-[#21275a] font-semibold">Full-Time B.Tech</div>
       </div>
-    </section>
+      <div>
+        <div class="text-3xl font-extrabold text-[#b00f1e] mb-1">6</div>
+        <div class="text-[#21275a] font-semibold">Specializations</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-[#b00f1e] mb-1">720</div>
+        <div class="text-[#21275a] font-semibold">Total Seats</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-[#b00f1e] mb-1">No JEE</div>
+        <div class="text-[#21275a] font-semibold">Required</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Courses Offered Section -->
-    <section id="curriculum" class="py-20 px-4 md:px-10 lg:px-20 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-[#21275a] text-[#21275a] text-[#21275a] text-[#21275a]">
-          <div class="max-w-2xl text-[#21275a] text-[#21275a] text-[#21275a] text-[#21275a] text-[#21275a]">
-            <h2 class="text-3xl md:text-[#21275a]xl font-black text-[#21275a] mb-6 text-[#21275a] text-[#21275a] text-[#21275a] text-[#21275a]">Specializations Offered</h2>
-            <p class="text-[#f7ba26]">Explore our cutting-edge engineering specializations designed for the next generation of tech leaders.</p>
-          </div>
-          <p class="text-[#f7ba26] font-bold">University: St. Mary's Rehabilitation University, Hyderabad</p>
-        </div>
+  <!-- PROGRAMS -->
+  <section id="programs" class="bg-white py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-[#21275a] mb-4">All B.Tech Programs</h2>
+        <div class="w-20 h-1.5 bg-[#f7ba26] mx-auto rounded-full"></div>
+      </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            {
-              title: "B.Tech CSE (AI & Data Science)",
-              seats: 180,
-              roles: ["Data Scientist", "ML Engineer", "AI Research Analyst", "NLP Engineer", "Computer Vision Engineer"],
-              bg: "bg-[#b00f1e]",
-              border: "border-[#f7ba26]/20"
-            },
-            {
-              title: "B.Tech CSE (FinTech & AI)",
-              seats: 60,
-              roles: ["FinTech Product Manager", "Blockchain Developer", "Quantitative Analyst", "Algorithmic Trader"],
-              bg: "bg-[#b00f1e]",
-              border: "border-[#f7ba26]/20"
-            },
-            {
-              title: "B.Tech CSE (Core)",
-              seats: 180,
-              roles: ["Software Engineer", "Full Stack Developer", "Cloud & DevOps Engineer", "Systems Programmer"],
-              bg: "bg-[#b00f1e]",
-              border: "border-[#f7ba26]/20"
-            },
-            {
-              title: "B.Tech CSE (AI & ML)",
-              seats: 180,
-              roles: ["Deep Learning Scientist", "Generative AI Developer", "MLOps Engineer", "LLM Engineer"],
-              bg: "bg-[#b00f1e]",
-              border: "border-[#f7ba26]/20"
-            },
-            {
-              title: "B.Tech CSE (Cyber Security with AI/ML)",
-              seats: 60,
-              roles: ["Cybersecurity Analyst", "Ethical Hacker", "SOC Analyst", "Threat Intelligence Analyst"],
-              bg: "bg-[#b00f1e]",
-              border: "border-[#f7ba26]/20"
-            },
-            {
-              title: "Biomedical Engineering & Medical Robotics",
-              seats: 60,
-              roles: ["HealthTech AI Specialist", "Medical Imaging Analyst", "Rehabilitation Engineer", "MedTech Designer"],
-              bg: "bg-[#b00f1e]",
-              border: "border-[#f7ba26]/20"
-            }
-          ].map((course) => (
-            <div class={`${course.bg} ${course.border} border-2 rounded-3xl p-8 flex flex-col justify-between hover:scale-105 transition-all duration-500 group shadow-lg shadow-black/20`}>
-              <div>
-                <div class="flex justify-between items-start mb-6">
-                  <h3 class="text-xl font-bold text-[#21275a] max-w-[200px] leading-tight group-hover:text-white transition-colors">{course.title}</h3>
-                  <span class="bg-[#f7ba26] py-1 px-3 rounded-full text-xs font-bold text-[#b00f1e]">{course.seats} Seats</span>
-                </div>
-                <div class="mb-8">
-                  <p class="text-xs font-bold text-[#f7ba26] uppercase mb-3 tracking-widest">Career Paths</p>
-                  <div class="flex flex-wrap gap-2 text-[#21275a] text-[#21275a] text-[#21275a] text-[#21275a] text-[#21275a]">
-                    {course.roles.map(role => (
-                      <span class="text-[10px] bg-white/10 border border-white/20 px-2 py-1 rounded-md text-[#21275a]">{role}</span>
-                    ))}
-                  </div>
-                </div>
+      <div class="flex flex-col gap-8">
+
+        <!-- Program 1 -->
+        <div class="border-2 border-[#21275a]/10 rounded-2xl p-8 md:p-10 bg-white hover:border-[#b00f1e] transition-colors">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block px-3 py-1 bg-[#f7ba26]/20 text-[#21275a] text-xs font-bold rounded-full uppercase">Most Popular</span>
               </div>
-              <a href="#apply" class="text-sm font-bold text-[#f7ba26] flex items-center gap-2 group-hover:gap-4 transition-all">
-                Learn More <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <h3 class="text-2xl md:text-3xl font-bold text-[#21275a] mb-2">B.Tech CSE (AI & Data Science)</h3>
+              <p class="text-[#21275a] leading-relaxed max-w-2xl">
+                Master artificial intelligence, machine learning, big data analytics, and data engineering. Build real-world AI products with industry mentors.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Machine Learning</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Big Data</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Deep Learning</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Data Engineering</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-3">
+              <div class="text-center md:text-right">
+                <div class="text-3xl font-extrabold text-[#b00f1e]">180</div>
+                <div class="text-[#21275a] font-semibold text-sm">Seats Available</div>
+              </div>
+              <a href="/#apply" class="inline-flex px-8 py-3 bg-[#b00f1e] text-white font-bold rounded-xl hover:bg-[#8a0c17] transition-colors whitespace-nowrap">
+                Apply Now
               </a>
             </div>
-          ))}
+          </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="border-2 border-[#21275a]/10 rounded-2xl p-8 md:p-10 bg-white hover:border-[#b00f1e] transition-colors">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-bold text-[#21275a] mb-2">B.Tech CSE (AI & Machine Learning)</h3>
+              <p class="text-[#21275a] leading-relaxed max-w-2xl">
+                Deep dive into machine learning algorithms, neural networks, NLP, computer vision, and AI system design for enterprise applications.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Neural Networks</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">NLP</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Computer Vision</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">AI Systems</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-3">
+              <div class="text-center md:text-right">
+                <div class="text-3xl font-extrabold text-[#b00f1e]">180</div>
+                <div class="text-[#21275a] font-semibold text-sm">Seats Available</div>
+              </div>
+              <a href="/#apply" class="inline-flex px-8 py-3 bg-[#b00f1e] text-white font-bold rounded-xl hover:bg-[#8a0c17] transition-colors whitespace-nowrap">
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="border-2 border-[#21275a]/10 rounded-2xl p-8 md:p-10 bg-white hover:border-[#b00f1e] transition-colors">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-bold text-[#21275a] mb-2">B.Tech CSE (Core)</h3>
+              <p class="text-[#21275a] leading-relaxed max-w-2xl">
+                A strong foundation in computer science — algorithms, data structures, operating systems, databases, networks, and software engineering.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Algorithms</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">OS & Networks</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Software Engineering</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Databases</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-3">
+              <div class="text-center md:text-right">
+                <div class="text-3xl font-extrabold text-[#b00f1e]">180</div>
+                <div class="text-[#21275a] font-semibold text-sm">Seats Available</div>
+              </div>
+              <a href="/#apply" class="inline-flex px-8 py-3 bg-[#b00f1e] text-white font-bold rounded-xl hover:bg-[#8a0c17] transition-colors whitespace-nowrap">
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="border-2 border-[#21275a]/10 rounded-2xl p-8 md:p-10 bg-white hover:border-[#b00f1e] transition-colors">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block px-3 py-1 bg-[#b00f1e]/10 text-[#b00f1e] text-xs font-bold rounded-full uppercase">Limited Seats</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-[#21275a] mb-2">B.Tech CSE (FinTech & Artificial Intelligence)</h3>
+              <p class="text-[#21275a] leading-relaxed max-w-2xl">
+                Combine finance technology with AI — blockchain, digital payments, AI-driven financial systems, and algorithmic trading.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Blockchain</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Digital Payments</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Algo Trading</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">AI in Finance</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-3">
+              <div class="text-center md:text-right">
+                <div class="text-3xl font-extrabold text-[#b00f1e]">60</div>
+                <div class="text-[#21275a] font-semibold text-sm">Seats Available</div>
+              </div>
+              <a href="/#apply" class="inline-flex px-8 py-3 bg-[#b00f1e] text-white font-bold rounded-xl hover:bg-[#8a0c17] transition-colors whitespace-nowrap">
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 5 -->
+        <div class="border-2 border-[#21275a]/10 rounded-2xl p-8 md:p-10 bg-white hover:border-[#b00f1e] transition-colors">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block px-3 py-1 bg-[#b00f1e]/10 text-[#b00f1e] text-xs font-bold rounded-full uppercase">Limited Seats</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-[#21275a] mb-2">B.Tech CSE (Cyber Security with AI/ML)</h3>
+              <p class="text-[#21275a] leading-relaxed max-w-2xl">
+                Defend digital infrastructure using AI-powered threat detection, ethical hacking, cryptography, and network security systems.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Ethical Hacking</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Cryptography</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Network Security</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Threat Detection</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-3">
+              <div class="text-center md:text-right">
+                <div class="text-3xl font-extrabold text-[#b00f1e]">60</div>
+                <div class="text-[#21275a] font-semibold text-sm">Seats Available</div>
+              </div>
+              <a href="/#apply" class="inline-flex px-8 py-3 bg-[#b00f1e] text-white font-bold rounded-xl hover:bg-[#8a0c17] transition-colors whitespace-nowrap">
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 6 -->
+        <div class="border-2 border-[#21275a]/10 rounded-2xl p-8 md:p-10 bg-white hover:border-[#b00f1e] transition-colors">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="inline-block px-3 py-1 bg-[#b00f1e]/10 text-[#b00f1e] text-xs font-bold rounded-full uppercase">Limited Seats</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-[#21275a] mb-2">B.Tech Biomedical Engineering, AI & Medical Robotics</h3>
+              <p class="text-[#21275a] leading-relaxed max-w-2xl">
+                The future of healthcare technology — medical imaging AI, surgical robotics, biosensors, and intelligent diagnostic systems.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Medical Imaging</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Surgical Robotics</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Biosensors</span>
+                <span class="px-3 py-1 bg-[#21275a]/5 text-[#21275a] text-sm font-medium rounded-lg">Diagnostics AI</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-3">
+              <div class="text-center md:text-right">
+                <div class="text-3xl font-extrabold text-[#b00f1e]">60</div>
+                <div class="text-[#21275a] font-semibold text-sm">Seats Available</div>
+              </div>
+              <a href="/#apply" class="inline-flex px-8 py-3 bg-[#b00f1e] text-white font-bold rounded-xl hover:bg-[#8a0c17] transition-colors whitespace-nowrap">
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSION PROCESS -->
+  <section class="bg-white py-20 px-6 border-t-2 border-[#21275a]/10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-extrabold text-[#21275a] mb-4">Admission Process</h2>
+        <div class="w-20 h-1.5 bg-[#f7ba26] mx-auto rounded-full mb-6"></div>
+        <p class="text-xl text-[#21275a]">Simple, transparent, merit-based. No JEE required.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="text-center p-6 border-2 border-[#21275a]/10 rounded-2xl">
+          <div class="w-14 h-14 bg-[#b00f1e] text-white text-2xl font-extrabold rounded-full flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="font-bold text-[#21275a] text-lg mb-2">Register</h3>
+          <p class="text-[#21275a] text-sm">Sign up for ROGER SAT — free of cost, no JEE score needed</p>
+        </div>
+        <div class="text-center p-6 border-2 border-[#21275a]/10 rounded-2xl">
+          <div class="w-14 h-14 bg-[#b00f1e] text-white text-2xl font-extrabold rounded-full flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="font-bold text-[#21275a] text-lg mb-2">Appear for SAT</h3>
+          <p class="text-[#21275a] text-sm">Take the ROGER SAT aptitude test at an IIAT center</p>
+        </div>
+        <div class="text-center p-6 border-2 border-[#21275a]/10 rounded-2xl">
+          <div class="w-14 h-14 bg-[#b00f1e] text-white text-2xl font-extrabold rounded-full flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="font-bold text-[#21275a] text-lg mb-2">Counselling</h3>
+          <p class="text-[#21275a] text-sm">Select your program and specialization based on your score</p>
+        </div>
+        <div class="text-center p-6 border-2 border-[#21275a]/10 rounded-2xl">
+          <div class="w-14 h-14 bg-[#b00f1e] text-white text-2xl font-extrabold rounded-full flex items-center justify-center mx-auto mb-4">4</div>
+          <h3 class="font-bold text-[#21275a] text-lg mb-2">Join IIAT</h3>
+          <p class="text-[#21275a] text-sm">Complete enrollment and begin your B.Tech journey</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Details Table Section -->
-    <section class="py-20 px-4 md:px-10 lg:px-20 bg-[#b00f1e]">
-       <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10">
-          <h2 class="text-3xl font-bold text-[#f7ba26] mb-10 text-center uppercase tracking-tight">Program Architecture</h2>
-          <div class="space-y-6">
-             <div class="flex flex-col md:flex-row md:items-center py-4 border-b border-white/5 gap-4">
-                <div class="md:w-1/3 flex items-center gap-3">
-                   <div class="w-2 h-2 rounded-full bg-[#f7ba26]"></div>
-                   <span class="text-sm font-bold text-[#21275a]/60 tracking-widest uppercase">Duration</span>
-                </div>
-                <div class="md:w-2/3 text-lg font-bold text-[#21275a]">4 Years (8 Semesters)</div>
-             </div>
-             <div class="flex flex-col md:flex-row md:items-center py-4 border-b border-white/5 gap-4">
-                <div class="md:w-1/3 flex items-center gap-3">
-                   <div class="w-2 h-2 rounded-full bg-[#f7ba26]"></div>
-                   <span class="text-sm font-bold text-[#21275a]/60 tracking-widest uppercase">Eligibility</span>
-                </div>
-                <div class="md:w-2/3 text-sm text-[#21275a] leading-relaxed">
-                   <strong>10+2 / Intermediate</strong> with PCB or PCM — Minimum passing marks required.
-                </div>
-             </div>
-             <div class="flex flex-col md:flex-row md:items-center py-4 border-b border-white/5 gap-4">
-                <div class="md:w-1/3 flex items-center gap-3">
-                   <div class="w-2 h-2 rounded-full bg-[#f7ba26]"></div>
-                   <span class="text-sm font-bold text-[#21275a]/60 tracking-widest uppercase">Fee Structure</span>
-                </div>
-                <div class="md:w-2/3">
-                   <p class="text-lg font-bold text-[#f7ba26]">₹1,50,000 – ₹2,00,000 per year</p>
-                   <p class="text-xs text-[#21275a]/50 italic">Merit-based slabs based on Intermediate percentage.</p>
-                </div>
-             </div>
-             <div class="flex flex-col md:flex-row md:items-center py-4 gap-4">
-                <div class="md:w-1/3 flex items-center gap-3">
-                   <div class="w-2 h-2 rounded-full bg-[#f7ba26]"></div>
-                   <span class="text-sm font-bold text-[#21275a]/60 tracking-widest uppercase">Selection</span>
-                </div>
-                <div class="md:w-2/3">
-                   <p class="text-sm font-bold text-[#21275a]">IIAT Scholarship Test (ROGER SAT)</p>
-                   <p class="text-xs text-[#f7ba26] mt-1 uppercase tracking-tight font-semibold">Free to register • gamified logical ability testing</p>
-                </div>
-             </div>
-          </div>
-          <div class="mt-12 text-center">
-             <a href="#apply" class="inline-block bg-[#b00f1e] text-[#21275a] font-bold py-4 px-10 rounded-2xl hover:bg-[#f7ba26] hover:text-[#21275a] transition-all transform hover:scale-105">
-                Register for ROGER SAT
-             </a>
-          </div>
-       </div>
-    </section>
+  <!-- FINAL CTA -->
+  <section class="bg-[#21275a] py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-extrabold text-white mb-6">Ready to Begin?</h2>
+      <p class="text-xl text-gray-300 mb-10">Register for ROGER SAT — completely free, no JEE required.</p>
+      <a href="mailto:info@iiath.com" class="inline-flex px-12 py-5 bg-[#f7ba26] text-[#21275a] font-extrabold text-lg rounded-xl hover:bg-[#fccf46] transition-colors">
+        Contact Us — info@iiath.com
+      </a>
+    </div>
+  </section>
 
-    <!-- Application Link section -->
-    <section id="apply" class="py-20 px-4 md:px-10 lg:px-20 bg-[#b00f1e]">
-      <div class="max-w-7xl mx-auto text-center text-[#21275a]">
-        <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">Start Your Future <br/>At IIAT Hyderabad</h2>
-        <p class="text-xl mb-12 text-[#21275a]/80 max-w-2xl mx-auto">Register for ROGER SAT — Free to Register. No JEE Required. Focused on logical ability, reasoning, and curiosity.</p>
-        <div class="flex flex-col items-center gap-6">
-          <a href="https://iiath.com" class="bg-[#f7ba26] text-[#21275a] text-2xl font-black py-6 px-16 rounded-full hover:bg-white transition-all shadow-2xl">
-            iiath.com | Register Now
-          </a>
-          <p class="font-bold tracking-[0.2em] text-[#21275a]/60">CONTACT : +918688664337</p>
-        </div>
-      </div>
-    </section>
-  </main>
 </Layout>
-
-<style>
-  .btn-primary {
-    @apply inline-flex items-center justify-center bg-[#b00f1e] text-[#21275a] font-bold rounded-2xl transition-all duration-300 hover:bg-white shadow-lg shadow-[#b00f1e]/20;
-  }
-  .btn-secondary {
-    @apply inline-flex items-center justify-center bg-transparent border-2 border-[#21275a] text-[#21275a] font-bold rounded-2xl transition-all duration-300 hover:bg-white hover:text-[#21275a];
-  }
-</style>
